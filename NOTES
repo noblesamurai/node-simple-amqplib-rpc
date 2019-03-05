@@ -1,0 +1,14 @@
+- client
+  - queue progress tracking?
+- server
+  - run process in worker (cluster) so we don't die
+- reply queue with tracking ids
+- separate consume and publish channels
+
+
+
+client.run('spielberg-render', ...args);
+
+
+
+amqplib rxjs rpc

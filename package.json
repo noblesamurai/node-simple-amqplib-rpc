@@ -1,0 +1,52 @@
+{
+  "name": "amqprpc",
+  "description": "",
+  "version": "0.0.0",
+  "author": "Andrew Harris <andrew@noblesamurai.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc npm test",
+    "pretest": "semistandard",
+    "test": "mocha --recursive test",
+    "watch": "mocha --recursive --watch test"
+  },
+  "homepage": "https://github.com/noblesamurai/amqprpc",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/noblesamurai/amqprpc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noblesamurai/amqprpc/issues"
+  },
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "dirty-chai": "^2.0.1",
+    "jsdoc-to-markdown": "^4.0.0",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "semistandard": "^13.0.1"
+  },
+  "keywords": [],
+  "nyc": {
+    "include": [
+      "src"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "cache": true,
+    "all": true
+  },
+  "semistandard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}
