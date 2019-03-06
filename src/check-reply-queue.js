@@ -4,7 +4,7 @@ module.exports = checkReplyQueue;
  * Check if a "reply to" queue exists or not. Will create a separate channel so that it doesn't
  * kill an existing one if the queue check fails.
  *
- * @param {amqplibConnection} connection
+ * @param {amqplibConnection} connection amqplib connection
  * @param {object} message incomming message
  * @return {boolean} whether the reply queue exists or not
  */
