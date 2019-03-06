@@ -9,6 +9,7 @@ const NoRouteError = errorEx('NoRouteError');
 const ResponseError = errorEx('ResponseError');
 
 /**
+ * @private
  * Get a promise that will throw on channel close or after a timeout period (if set).
  *
  * @async
@@ -23,6 +24,7 @@ const getChannelCloseOrTimeoutEventPromise = async (channel, opts) => {
 };
 
 /**
+ * @private
  * Wait for the first 'basic.return' event and check if it contains a NO_ROUTE error.
  * If no route could be found (ie. whatever we published didn't get sent anywhere) throw an error.
  *
@@ -39,6 +41,7 @@ const getChannelResponseEventPromise = async (channel, key) => {
 };
 
 /**
+ * @private
  * Returns a promise that resolves with the rpc response data.
  *
  * @async
@@ -63,6 +66,7 @@ const getResponsePromise = (channel, key) => new Promise((resolve, reject) => {
 });
 
 /**
+ * @private
  * Parse the response message.
  *
  * @param {object} message
@@ -83,14 +87,16 @@ function parseResponse (message) {
  * Make an rpc request. Each request will have its own channel.
  *
  * @async
- * @param {amqplibConnection} connection
- * @param {string} key
+ * @param {amqplibConnection} connection amqplib connection
+ * @param {string} key the routing key for the rpc service
  * @param {*} content must be json serialisable
+ * @param {object} opts
  * @param {string} opts.exchange the amqp exchange to publish to (defaults to '')
  * @param {number} opts.timeout optional max time to wait for a response
  * @return {*} json decoded response
  * @throws {ChannelClosedError} when the channel is closed
  * @throws {NoRouteError} if a published message has nowhere to go
+ * @throws {ResponseError} if the request returned an error
  * @throws {TimeoutError} after the specified timeout period
  */
 async function request (connection, key, content, opts = {}) {

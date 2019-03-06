@@ -1,5 +1,4 @@
 language: node_js
-before_install: "! grep PLEASE_FILL_IN_HERE README.md"
 node_js:
   - '8'
   - '10'
@@ -11,6 +10,4 @@ before_script:
 script: npm run coverage
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-cache:
-  directories:
-    - node_modules
+cache: npm
