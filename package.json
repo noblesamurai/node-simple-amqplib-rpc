@@ -1,7 +1,7 @@
 {
   "name": "@noblesam/amqprpc",
   "description": "simple amqp rpc interface",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Andrew Harris <andrew@noblesamurai.com>",
   "license": "SEE LICENSE IN LICENSE",
   "main": "src/index.js",
