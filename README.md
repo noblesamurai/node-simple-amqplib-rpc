@@ -63,7 +63,7 @@ consumeChannel.consume(config.queue, async message => {
     const sum = numbers.reduce((acc, n) => acc + n, 0);
     reply(consumeChannel, message, sum, publishChannel);
   } catch (err) {
-    // if something wen't wrong, return an error to the client
+    // if something went wrong, return an error to the client
     error(consumeChannel, message, err, publishChannel);
   }
 });
