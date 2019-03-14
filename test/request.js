@@ -26,7 +26,7 @@ class Channel extends EventEmitter {
 }
 
 describe('request', function () {
-  it('should request and recieve response from amqp rpc request', async function () {
+  it('should request and receive response from amqp rpc request', async function () {
     const response = 'SUCCESS';
     const channel = new Channel(
       { content: JSON.stringify(response), properties: { type: 'success' } }
