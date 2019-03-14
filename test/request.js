@@ -70,6 +70,13 @@ describe('request', function () {
     await expect(promise).to.eventually.be.rejected.with.property('name', 'NoRouteError');
   });
 
+  it('should throw a "timeout" error', async function () {
+    const channel = new Channel(false);
+    const connection = { createConfirmChannel: async () => channel };
+    const promise = request(connection, 'test', 'REQUEST', { timeout: 0 }); // timeout instantly
+    await expect(promise).to.eventually.be.rejected.with.property('name', 'TimeoutError');
+  });
+
   it('should throw a "response" error', async function () {
     const message = 'BOOM!!!';
     const code = 42;
