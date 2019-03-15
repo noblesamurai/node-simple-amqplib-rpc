@@ -5,6 +5,9 @@
   "author": "Andrew Harris <andrew@noblesamurai.com>",
   "license": "BSD",
   "main": "src/index.js",
+  "files": [
+    "/src"
+  ],
   "scripts": {
     "coverage": "nyc npm test",
     "docs": "jsdoc2md src/*.js",
