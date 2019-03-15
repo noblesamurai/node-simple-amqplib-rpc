@@ -1,12 +1,16 @@
 {
-  "name": "amqprpc",
-  "description": "",
-  "version": "0.0.0",
+  "name": "amqplibrpc",
+  "description": "simple amqp rpc interface",
+  "version": "1.0.0",
   "author": "Andrew Harris <andrew@noblesamurai.com>",
-  "license": "SEE LICENSE IN LICENSE",
-  "main": "index.js",
+  "license": "BSD",
+  "main": "src/index.js",
+  "files": [
+    "/src"
+  ],
   "scripts": {
     "coverage": "nyc npm test",
+    "docs": "jsdoc2md src/*.js",
     "pretest": "semistandard",
     "test": "mocha --recursive test",
     "watch": "mocha --recursive --watch test"
@@ -23,16 +27,29 @@
     "node": "10.x",
     "npm": "6.x"
   },
-  "dependencies": {},
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "error-ex": "^1.3.2",
+    "p-event": "^3.0.0"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
     "dirty-chai": "^2.0.1",
-    "jsdoc-to-markdown": "^4.0.0",
+    "jsdoc-to-markdown": "^4.0.1",
     "mocha": "^6.0.2",
     "nyc": "^13.3.0",
-    "semistandard": "^13.0.1"
+    "semistandard": "^13.0.1",
+    "sinon": "^7.2.7",
+    "sinon-chai": "^3.3.0"
   },
-  "keywords": [],
+  "keywords": [
+    "amqp",
+    "amqplib",
+    "rabbit",
+    "rabbitmq",
+    "rpc"
+  ],
   "nyc": {
     "include": [
       "src"
