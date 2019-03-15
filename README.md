@@ -1,4 +1,4 @@
-# AMQPLIB RPC [![Build Status](https://travis-ci.com/noblesamurai/node-amqprpc.svg?***REMOVED***&branch=master)](https://travis-ci.com/noblesamurai/node-amqprpc)
+# Simple amqplib RPC [![Build Status](https://travis-ci.com/noblesamurai/node-simple-amqplib-rpc.svg?***REMOVED***&branch=master)](https://travis-ci.com/noblesamurai/node-simple-amqplib-rpc)
 
 > Simple RPC interface for [amqplib](https://github.com/squaremo/amqp.node)
 
@@ -7,7 +7,7 @@
 This module is installed via npm:
 
 ``` bash
-$ npm install @noblesam/amqprpc
+$ npm install simple-amqplib-rpc
 ```
 
 ## Example Usage
@@ -15,7 +15,7 @@ $ npm install @noblesam/amqprpc
 Client side:
 ```js
 const amqplib = require('amqplib');
-const { request } = require('@noblesam/amqprpc');
+const { request } = require('simple-amqplib-rpc');
 const config = {
   url: '***REMOVED***
   exchange: 'exchange',
@@ -41,7 +41,7 @@ try {
 Server side:
 ```js
 const amqplib = require('amqplib');
-const { checkReplyQueue, error, reply } = require('@noblesam/amqprpc');
+const { checkReplyQueue, error, reply } = require('simple-amqplib-rpc');
 const config = {
   url: '***REMOVED***
   exchange: 'exchange',

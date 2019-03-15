@@ -1,5 +1,5 @@
 {
-  "name": "amqplibrpc",
+  "name": "simple-amqplib-rpc",
   "description": "simple amqp rpc interface",
   "version": "1.0.0",
   "author": "Andrew Harris <andrew@noblesamurai.com>",
@@ -15,13 +15,13 @@
     "test": "mocha --recursive test",
     "watch": "mocha --recursive --watch test"
   },
-  "homepage": "https://github.com/noblesamurai/amqprpc",
+  "homepage": "https://github.com/noblesamurai/node-simple-amqplib-rpc",
   "repository": {
     "type": "git",
-    "url": "git://github.com/noblesamurai/amqprpc.git"
+    "url": "git://github.com/noblesamurai/node-simple-amqplib-rpc.git"
   },
   "bugs": {
-    "url": "https://github.com/noblesamurai/amqprpc/issues"
+    "url": "https://github.com/noblesamurai/node-simple-amqplib-rpc/issues"
   },
   "engines": {
     "node": "10.x",
