@@ -1,6 +1,6 @@
-# AMQP RPC [![Build Status](https://travis-ci.com/noblesamurai/node-amqprpc.svg?token=PC1JzuQfu665cjyGAsHB&branch=master)](https://travis-ci.com/noblesamurai/node-amqprpc)
+# AMQPLIB RPC [![Build Status](https://travis-ci.com/noblesamurai/node-amqprpc.svg?token=PC1JzuQfu665cjyGAsHB&branch=master)](https://travis-ci.com/noblesamurai/node-amqprpc)
 
-> Simple RPC interface for AMQP
+> Simple RPC interface for [amqplib](https://github.com/squaremo/amqp.node)
 
 ## Installation
 
