@@ -105,10 +105,16 @@ async function request (connection, key, content, opts = {}) {
   const payload = Buffer.from(JSON.stringify(content));
   const responsePromise = getResponsePromise(channel, key);
   channel.publish(exchange, key, payload, { replyTo: 'amq.rabbitmq.reply-to', mandatory: true });
-  const res = await Promise.race([
-    responsePromise,
-    getChannelCloseOrTimeoutEventPromise(channel, opts)
-  ]);
-  await channel.close();
-  return res;
+  try {
+    const res = await Promise.race([
+      responsePromise,
+      getChannelCloseOrTimeoutEventPromise(channel, opts)
+    ]);
+    return res;
+  } finally {
+    // close ignoring any errors (incase the channel has already closed) so that
+    // any error thrown in the above try is still actually thrown rather than
+    // overridden here by the channel close error instead.
+    await channel.close().catch(() => {});
+  }
 }
