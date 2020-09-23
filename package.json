@@ -1,7 +1,7 @@
 {
   "name": "simple-amqplib-rpc",
   "description": "simple amqp rpc interface",
-  "version": "1.0.1",
+  "version": "1.0.2-0",
   "author": "Andrew Harris <andrew@noblesamurai.com>",
   "license": "BSD",
   "main": "src/index.js",
@@ -24,11 +24,11 @@
     "url": "https://github.com/noblesamurai/node-simple-amqplib-rpc/issues"
   },
   "engines": {
-    "node": "10.x",
+    "node": ">=10.0.0",
     "npm": "6.x"
   },
   "dependencies": {
-    "amqplib": "^0.5.3",
+    "amqplib": "^0.6.0",
     "error-ex": "^1.3.2",
     "p-event": "^3.0.0"
   },
