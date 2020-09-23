@@ -1,7 +1,7 @@
 {
   "name": "simple-amqplib-rpc",
   "description": "simple amqp rpc interface",
-  "version": "1.0.2-0",
+  "version": "1.0.2",
   "author": "Andrew Harris <andrew@noblesamurai.com>",
   "license": "BSD",
   "main": "src/index.js",
