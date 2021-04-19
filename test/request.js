@@ -8,11 +8,13 @@ class Channel extends EventEmitter {
     super();
     this.response = response;
   }
+
   async checkQueue (queue) {
     if (queue === 'exists') return { queue, messageCount: 0, consumerCount: 1 };
     this.emit('error', new Error(`Channel closed by server: 404 (NOT-FOUND) with message "NOT_FOUND - no queue '${queue}' in host '/'"`));
     throw new Error(`Operation failed: QueueDeclare; 404 (NOT-FOUND) with message "NOT_FOUND - no queue '${queue}' in vhost '/'"`);
   }
+
   publish (exchange, key, payload, opts = {}) {}
   consume (queue, handler, opts = {}) {
     if (queue === 'amq.rabbitmq.reply-to' && !opts.noAck) {
@@ -20,6 +22,7 @@ class Channel extends EventEmitter {
     }
     if (this.response) handler(this.response);
   }
+
   async close () {
     this.emit('close');
   }

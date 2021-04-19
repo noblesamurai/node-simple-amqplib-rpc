@@ -8,6 +8,7 @@ class Channel extends EventEmitter {
     this.emit('error', new Error(`Channel closed by server: 404 (NOT-FOUND) with message "NOT_FOUND - no queue '${queue}' in host '/'"`));
     throw new Error(`Operation failed: QueueDeclare; 404 (NOT-FOUND) with message "NOT_FOUND - no queue '${queue}' in vhost '/'"`);
   }
+
   close () {}
 }
 const connection = {
