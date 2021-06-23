@@ -1,4 +1,4 @@
-# Simple amqplib RPC [![Build Status](https://travis-ci.com/noblesamurai/node-simple-amqplib-rpc.svg?***REMOVED***&branch=master)](https://travis-ci.com/noblesamurai/node-simple-amqplib-rpc)
+# Simple amqplib RPC
 
 > Simple RPC interface for [amqplib](https://github.com/squaremo/amqp.node)
 
@@ -17,7 +17,7 @@ Client side:
 const amqplib = require('amqplib');
 const { request } = require('simple-amqplib-rpc');
 const config = {
-  url: '***REMOVED***
+  url: 'amqp://...',
   exchange: 'exchange',
   routingKey: 'sum'
 };
@@ -43,7 +43,7 @@ Server side:
 const amqplib = require('amqplib');
 const { checkReplyQueue, error, reply } = require('simple-amqplib-rpc');
 const config = {
-  url: '***REMOVED***
+  url: 'amqp://...',
   exchange: 'exchange',
   queue: 'sum',
   routingKey: 'sum'
