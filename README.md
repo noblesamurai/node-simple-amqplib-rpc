@@ -94,8 +94,8 @@ the error response has been sent.</p>
 Check if a "reply to" queue exists or not. Will create a separate channel so that it doesn't
 kill an existing one if the queue check fails.
 
-**Kind**: global function  
-**Returns**: <code>boolean</code> - whether the reply queue exists or not  
+**Kind**: global function
+**Returns**: <code>boolean</code> - whether the reply queue exists or not
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ kill an existing one if the queue check fails.
 Reply to an rpc request with an error. Will automatically nack and not requeue the message after
 the error response has been sent.
 
-**Kind**: global function  
+**Kind**: global function
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -122,7 +122,7 @@ the error response has been sent.
 ## reply(channel, message, content, publisherChannel)
 Reply to an rpc request. Will automatically ack the message after the response has been sent.
 
-**Kind**: global function  
+**Kind**: global function
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -157,6 +157,20 @@ Make an rpc request. Each request will have its own channel.
 
 Note: To regenerate this section from the jsdoc run `npm run docs` and paste
 the output above.
+
+## Contributing
+
+### Prerequisites
+
+```
+$ pip install pre-commit
+```
+
+### Installation
+
+```
+$ pre-commit install --install-hooks
+```
 
 ## License
 
